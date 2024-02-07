@@ -1,7 +1,7 @@
 x = input()
 count = 0
 for i in range(0, len(x)):
-    if(x[i] == 'H' or x[i] == 'Q' or x[i] == '9' or x[i] == '+'):
+    if(x[i] == 'H' or x[i] == 'Q' or x[i] == '9'):
         count += 1
         break
 
