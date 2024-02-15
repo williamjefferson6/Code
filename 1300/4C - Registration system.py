@@ -1,14 +1,17 @@
 n = int(input())
-l = []
-for i in range(0, n):
-    s = input()
-    check = 0
-    l.append(s)
-    for item in l:
-        if(item == s):
-            check += 1
-    if(check == 1):
-        print("OK")
+name_counter = {}
+response_list = []
+
+for i in range(n):
+    name = input()
+    count = name_counter.get(name, 0)
+    if count == 0:
+        response_list.append("OK")
     else:
-        print(s+str(check-1))
-    check = 0
+        new_name = name + str(count)
+        response_list.append(new_name)
+
+    name_counter[name] = count + 1
+
+for response in response_list:
+    print(response)
